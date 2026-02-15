@@ -314,3 +314,29 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
+/* Safari fix */
+
+.nutritional-info li.servings,
+.nutritional-info li.cooking-time {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  width: 100%;              /* NEW: Full width */
+  text-align: center;
+  justify-content: center;  /* NEW: Override space-between */
+  
+  /* Safari WebKit prefixes */
+  -webkit-justify-content: center;
+  -webkit-text-align: center;
+}
+
+/* Target Safari specifically */
+@supports (-webkit-appearance: none) {
+  .nutritional-info li.servings,
+  .nutritional-info li.cooking-time {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
