@@ -1,0 +1,316 @@
+/* Variables */
+:root {
+  --teal-primary: #0D9488;
+  --charcoal-dark: #1F2937;
+  --charcoal-medium: #374151;
+  --cream-light: #F8FAFC;
+  --cream-bg: #F9FAFB;
+  --white: #FFFFFF;
+  
+  /* Secondary for fitness/nutrition */
+  --success-green: #10B981;
+  --warning-orange: #F59E0B;
+  --nutrition-blue: #3B82F6;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;  /* Regular for body text */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;  /* Semi-bold headers */
+  letter-spacing: -0.02em;
+}
+
+.recipe-title {
+  font-weight: 700;  /* Bold for recipe names */
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+/* Nutrition tables - crisp, data-friendly */
+.nutrition-table {
+  font-variant-numeric: tabular-nums;  /* Keeps numbers aligned */
+  font-feature-settings: "tnum";
+}
+
+/* Styling */
+
+body {
+    background: var(--cream-bg);
+}
+
+/* Header */
+
+header {
+    background: var(--charcoal-dark);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    height: 100px;
+    border-bottom: 2px solid var(--teal-primary);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    /* border: 2px solid red; */
+    flex: 1;
+}
+
+#logo {
+    border:2px solid var(--teal-primary);
+    width: 90px;
+    /* border: 2px solid red;   */
+}
+
+nav {
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 2px;
+}
+
+.logo-container, nav {
+    display: flex;
+    flex: 0 0 20%;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    transition: all 0.3s ease;
+    margin: 0;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    background: var(--teal-primary);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    /* border: 1px solid yellow; */
+    width: 100px;
+}
+
+/* Main Styling */
+
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 4px solid var(--teal-primary);
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+     /* background-color: var(--teal-primary); */
+    /* border: 2px solid red; */
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    color: var(--charcoal-dark);
+    text-shadow: -1px 1px 2px var(--charcoal-medium);
+   
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: var(--charcoal-medium);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px var(--charcoal-medium);
+    margin-top: 20px;
+}
+
+.nutritional-info {
+    background: var(--teal-primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 40px;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid var(--charcoal-medium);
+    box-shadow: -2px 2px 5px var(--teal-primary);
+    max-width: 400px;
+}
+
+.nutritional-info ul {
+    list-style: none;
+    padding: 10px;;
+    margin: 0px;
+    /* border: 2px solid red; */
+}
+
+.nutritional-info li {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+    padding: 0px;
+}
+
+.nutritional-info li.servings {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-self: center;
+    gap: 10px;
+}
+
+.nutritional-info li.cooking-time {
+    font-style: italic;
+    text-align: center;
+    justify-self: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.instruction-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px 0px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ingredients-section, .instructions-section {
+    flex: 1;
+    background: var(--cream-light);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--charcoal-medium);
+    box-shadow: -2px 2px 5px var(--charcoal-medium);
+    min-width: 400px;
+    max-width: 40%;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.ingredients-section h2, .instructions-section h2 {
+    margin-bottom: 20px;
+    color: var(--charcoal-dark);
+    text-align: center;
+    border-bottom: 2px solid var(--teal-primary);
+}
+
+.ingredients-section ul, .instructions-section ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-section li, .instructions-section li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 10px;
+    border-bottom: 1px solid var(--charcoal-medium);
+}
+
+.instructions-section li {
+    counter-increment: step-counter;
+    position: relative;
+}
+
+.instructions-section li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--teal-primary);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredients-section:hover, .instructions-section:hover {
+    transform: scale(1.02);
+}
+
+.home-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: var(--teal-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-btn a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.home-btn:hover {
+    background: var(--success-green);
+    transform: scale(1.05);
+}
+
+footer {
+    background: var(--charcoal-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
